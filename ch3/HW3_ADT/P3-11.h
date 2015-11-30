@@ -1,0 +1,1 @@
+/*	================= emptyStack ================	This function determines if a stack is empty 	   Pre  stack is pointer to a stack	   Post returns 1 if empty; 0 if data in stack */bool emptyStack (STACK* stack) {//	Statements 	return (stack->count == 0);}	// emptyStack 

@@ -1,0 +1,16 @@
+15
+Einestein 52 67 63
+Abrew 90 86 90 93
+Nagasake 100 85 93 89
+Black 81 87 81 85
+Dijkstra 90 82 95 87
+Nguyen 84 80 95 91
+Walljasper 86 100 96 89
+Albert 70 68
+Dudley 74 79 77 81
+Rice 95
+Flintsone 73 81 78 74
+Dupre 82 76 79
+Light 89 76 91 83
+Tran 91 81 87 94
+Trapp 83 98 94 93

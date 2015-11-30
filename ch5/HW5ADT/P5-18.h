@@ -1,0 +1,1 @@
+/*	================== printInstr =================	Print instructions to user.	   Pre    nothing	   Post   instructions printed*/void printInstr (void){//	Statements 	printf("This program prints the Academy Awards \n"	  "Best Picture of the Year and its director.\n"	  "Your job is to enter the year; we will do\n"	  "the rest. Enjoy.\n");	return;}	// instr 

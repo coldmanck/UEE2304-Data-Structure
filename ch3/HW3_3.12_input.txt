@@ -1,0 +1,12 @@
+Test brace errors.
+}line 2 closing brace is not paired
+No braces.
+{opening brace is paired on same line}
+No braces.
+{opening brace paired later
+No braces.
+} Closing brace paired two lines up.
+{{{ Line 9. Three braces--only two paired.
+} First closing brace
+} Second closing brace.
+End of program. One opening brace left.

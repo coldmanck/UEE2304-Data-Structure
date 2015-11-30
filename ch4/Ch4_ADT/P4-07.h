@@ -1,0 +1,1 @@
+/*	================== emptyQueue =================	This algorithm checks to see if queue is empty 	Pre    queue is a pointer to a queue head node	Return true if empty; false if queue has data */bool emptyQueue (QUEUE* queue) {//	Statements 	return (queue->count == 0);}	// emptyQueue 
