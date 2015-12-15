@@ -1,0 +1,1 @@
+/*	=================== BST_Empty ==================	Returns true if tree is empty; false if any data.	   Pre      Tree has been created. (May be null) 	   Returns  True if tree empty, false if any data */bool BST_Empty (BST_TREE* tree){//	Statements 	return (tree->count == 0);}	// BST_Empty 

@@ -1,0 +1,1 @@
+/*	=================== BST_Count ==================	Returns number of nodes in tree.	   Pre     tree has been created 	   Returns tree count */int BST_Count (BST_TREE* tree){//	Statements 	return (tree->count);}	// BST_Count 
