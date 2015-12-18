@@ -48,3 +48,47 @@ int compare(void* a, void* b){
 ```
 
 ## Chapter 2: Recursion
+### Desing a recursive algorithm
+1. Determine the base case and the general case.
+2. Combine them into an algorithm.
+```
+/* Example: print input data reversely */
+Algorithm printReverse(data)
+  if (end of input) 
+    return
+  else
+    read data
+    printReverse(data)
+    print data
+    return
+  end if
+```
+
+### 3 Principles of examing whether recursion is good
+1. Is the algorithm or data structure naturally suited to recursion?
+  - e.g. Lists are not.
+2. Is the recursive solution shorter and more understandable?
+3. Does the recursive solution run within accpetable time and space limits?
+  - e.g. if time complexity if `O(n)`, maybe it's not.
+
+### Example: Hanoi Tower
+Generalization of the problem:
+1. Move `n-1` disks from source to auxiliary. (General case)
+2. Move `1` disk from source to destination. (Base case)
+3. Move `n-1` disks from auxiliary to destination. (General case)
+```
+/* Hanoi Tower in C */
+void hanoi(int num, int src, int aux, int des){
+	if(num == 1)
+		printf("Move %d from %d to %d\n", num, src, des);
+	else{
+		hanoi(num - 1, src, des, aux);
+		printf("Move %d from %d to %d\n", num, src, des);
+		hanoi(num - 1, aux, src, des);
+	}
+}
+// hanoi(3, 1, 2, 3);
+```
+## Chapter 3: Stack
+Linear list can be divided into 2 types: restricted and general list. Restricted one is sth like stacks and queues, while general list is sth that can be operated in a variety of conditions.
+
