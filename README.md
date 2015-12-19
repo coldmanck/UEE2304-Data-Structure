@@ -98,11 +98,11 @@ Linear list can be divided into 2 types: restricted and general list. Restricted
 - Top: return the data in the top element but doesn't do anything on it
 
 ### 8 stack operations defined on she stack
-1. createStack()
-2. pushStack(stack, data)
-3. popStack(stack, data)
-4. stackTop(stack, data)
-5. emptyStack(stack)
-6. fullStack(stack)
-7. stackCount(stack)
-8. destroyStack(stack)
+- createStack()
+- pushStack(stack, data)
+- popStack(stack, data)
+- stackTop(stack, data)
+- emptyStack(stack)
+- fullStack(stack)
+- stackCount(stack)
+- destroyStack(stack)
