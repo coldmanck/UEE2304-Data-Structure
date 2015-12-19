@@ -90,5 +90,13 @@ void hanoi(int num, int src, int aux, int des){
 // hanoi(3, 1, 2, 3);
 ```
 ## Chapter 3: Stack
-Linear list can be divided into 2 types: restricted and general list. Restricted one is sth like stacks and queues, while general list is sth that can be operated in a variety of conditions.
+Linear list can be divided into 2 types: restricted and general list. Restricted one is sth like stacks and queues, while general list is sth that can be operated in a variety of conditions. The stack is one of 3 data structures known collectively as *restrictive data structures* because the operations are restricted to the ends of the structure. The other 2 are the queue and the dequq (i.e. double-ended queue).
 
+### 3 basic stack operations on the stack
+- Push: push the data onto the stack top
+- Pop: return the data in the top element and delete it
+- Top: return the data in the top element but doesn't do anything on it
+
+### 8 stack operations defined on she stack
+- createStack()
+- 
