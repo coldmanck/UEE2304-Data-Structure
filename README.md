@@ -48,7 +48,7 @@ int compare(void* a, void* b){
 ```
 
 ## Chapter 2: Recursion
-### Desing a recursive algorithm
+### Designing a recursive algorithm
 1. Determine the base case and the general case.
 2. Combine them into an algorithm.
 ```
@@ -106,3 +106,12 @@ Linear list can be divided into 2 types: restricted and general list. Restricted
 - fullStack(stack)
 - stackCount(stack)
 - destroyStack(stack)
+
+### Main usage of stack
+- reverse of data
+- convertion (decimal <-> binary)
+- parsing (verifying parenthese pair)
+- postponement (infix -> postfix, evaluating postfix expression)
+- backtracking (goal seeking, the eight queens problem)
+
+## Chapter 4: Queue
