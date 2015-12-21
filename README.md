@@ -115,3 +115,31 @@ Linear list can be divided into 2 types: restricted and general list. Restricted
 - backtracking (goal seeking, the eight queens problem)
 
 ## Chapter 4: Queue
+A queue is a linear list in which data can only be inserted at one end, called the rear, and deleted from the other end, called the front. This operation ensure a queue is a FIFO structure.
+
+### Basis operations
+- enqueue
+- dequeue
+- queueFront
+- queueRear
+
+### Data structures
+1. Head
+```
+typedef queueHead {
+  queueNode* front;
+  queueNode* rear;
+  int count;
+} queueHead;
+```
+2. Node
+```
+typedef queueNode {
+  void* data;
+  queueNode* link;
+} queueNode*
+```
+
+### Operations
+- categorizing data (rearrange into a couple of categories)
+- queue simulation
