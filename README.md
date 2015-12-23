@@ -124,7 +124,14 @@ A queue is a linear list in which data can only be inserted at one end, called t
 - queueRear
 
 ### Data structures
-1. Head
+1. Node
+```
+typedef queueNode {
+  void* data;
+  queueNode* link;
+} queueNode*
+```
+2. Head
 ```
 typedef queueHead {
   queueNode* front;
@@ -132,14 +139,34 @@ typedef queueHead {
   int count;
 } queueHead;
 ```
-2. Node
-```
-typedef queueNode {
-  void* data;
-  queueNode* link;
-} queueNode*
-```
 
 ### Operations
 - categorizing data (rearrange into a couple of categories)
 - queue simulation
+
+## Chapter 5: General Linear Lists
+A general linear list is a list in which operations, such as retrievals, insertions, changes, and deletions can be done anywhere in the list. For simplicity, we refer to general linear lists as lists from now on.
+
+### Basic Operations
+- Insertion
+- Deletion
+- Retrieval: it requires that data be located in a list and presented to the calling module without changing the contens of the list.
+- Traversal: each execution of the traversal process 1 element in the list.
+
+### List ADT
+- Type definition:
+```
+typedef struct node {
+  void* dataPtr;
+  struct node* link;
+} NODE;
+
+typedef struct {
+  int count;
+  NODE* pos;
+  NODE* head;
+  NODE* rear;
+  int (*compare)(void* arg1, void* arg2);
+} LIST;
+```
+- 
