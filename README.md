@@ -1,5 +1,5 @@
 # UEE2304-Data-Structure
-Homework of [Data Structure](https://course.nctu.edu.tw/Course/CrsOutline/show.asp?Acy=104&Sem=1&CrsNo=1077&lang=en-us) at NCTU ECE in 2015 fall.
+Homework codes and note of [Data Structure](https://course.nctu.edu.tw/Course/CrsOutline/show.asp?Acy=104&Sem=1&CrsNo=1077&lang=en-us) in NCTU ECE in 2015 fall.
 
 ## Chapter 1: Basic concepts
 A **data structure** is an aggregation of atomic and composite data into a set with defined relationships. A **abstract data type** is a data declaration packaged together with the operations that are meaningful for the data tyoe.
@@ -176,13 +176,17 @@ typedef struct {
 - Multilinked List: a list with two or more logical key sequences
 
 ## Chapter 6: Introduction to Trees
+TBA
 
-## Chapter 8: AVL Search Trees
+## Chapter 7: Binary Search Tree
+TBA
+
+## Chapter 8: AVL Search Tree
 An AVL tree is a binary tree that either is empty or consist of 2 AVL subtrees, TL and TR, whose heights differ by no more than 1. **AVL tree balance factor** is a balance factore as the height of the lefft subtree minus that of the right subtree. When AVL tree balance factor represent different conditions when having specific value:
 - +1 : left high (LH) 
 - 0  : even high (EH)
 - -1 : right high (RH)
-- 
+
 ### Balancing Trees
 All unbalanced trees fall into one of those 4 cases:
 1. Left of left -> right rotate
