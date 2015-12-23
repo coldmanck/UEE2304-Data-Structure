@@ -169,4 +169,10 @@ typedef struct {
   int (*compare)(void* arg1, void* arg2);
 } LIST;
 ```
-- 
+
+## Other implementations
+- Circularly Linked List: the last node’s link points to the first node of the list
+- Doubly Linked List: each data node has a pointer to both its successor and its predecessor
+- Multilinked List: a list with two or more logical key sequences
+
+## Chapter 6: Introduction to Trees
