@@ -176,3 +176,62 @@ typedef struct {
 - Multilinked List: a list with two or more logical key sequences
 
 ## Chapter 6: Introduction to Trees
+
+## Chapter 8: AVL Search Trees
+An AVL tree is a binary tree that either is empty or consist of 2 AVL subtrees, TL and TR, whose heights differ by no more than 1. **AVL tree balance factor** is a balance factore as the height of the lefft subtree minus that of the right subtree. When AVL tree balance factor represent different conditions when having specific value:
+- +1 : left high (LH) 
+- 0  : even high (EH)
+- -1 : right high (RH)
+- 
+### Balancing Trees
+All unbalanced trees fall into one of those 4 cases:
+1. Left of left -> right rotate
+2. Right of right -> left rotate
+3. Right of left -> left then right rotate
+4. Left of right -> right then left rotate
+
+### AVL Tree Implementataions
+- Insert into AVL Tree: similar to the BST's add noe but check if balance when way back to root.
+```
+Algorithm AVLInsert(root, newData)
+  if(subtree empty)
+    insert newData at root
+    return root
+  end if
+  if(newData < root)
+    AVLInsert(left subtree, newData)
+    if(left subtree taller)
+      leftBalance(root)
+    end if
+  else
+    AVLInsert(right subtree, newData)
+    if(right subtree taller)
+      rightBalance(root)
+    end if
+  end if
+  return root
+end AVLInsert
+```
+- AVL Tree Left Balance algorithm:
+```
+Algorithm leftBalance(root)
+  if(left subtree high)
+    rotateRight(root)
+  else
+    rotateLeft(left subtree)
+    rotateRight(root)
+  end if
+end leftBalance
+```
+- AVL Tree rotate algorithm (right and left)
+```
+Algorithm rotateRight(root)
+  exchange left subtree with right subtree of left subtree
+  make left subtree new root
+end rotateRight
+
+Algorithm rotateLeft(root)
+  exchange right subtree with left subtree of right subtree
+  make right subtree new root
+end rotateLeft
+```
