@@ -301,9 +301,33 @@ typedef struct {
 ```
 
 ## Chapter 9: Heaps
-A heap is a binary tree whose left and right subtrees have values less than their parents. The root of a heap is guaranteed to hold the largest node in the tree. A **max-heap** is a complete or nearly complete (perfect or complete but not perfect) binary tree in which the key value in a node is greate than or equal to the key values in all of its subtrees, and the subtrees are in turn heaps.
+A heap is a binary tree whose left and right subtrees have values less than their parents. The root of a heap is guaranteed to hold the largest node in the tree. A **max-heap** is a complete or nearly complete (perfect or complete but not perfect) binary tree in which the key value in a node is greater than or equal to the key values in all of its subtrees, and the subtrees are in turn heaps.
 
-### 2 Matintenance Operations
-1. Reheap Up
+### Implementation
+Heap is often implemented with array. This is because heap is always complete or nearly complete (perfect or complete but not perfect) binary tree. There're several common knowledge about heap. For a node of index `i`, one can find its 
+1. left descedent at `2 * i + 1` and right descedent at `2 * i + 2`
+2. parent node at `|_ (i - 1) / 2 _|`, where `|_ _|` means an integer that smaller than or equal to a specific number.
+3. right sibling at `i + 1` and left sibling at `i - 1`
+4. given a complete heap and size `n`, the most left node's index is `|_ n / 2 _|`.
 
-2. Reheap Down
+### Matintenance Operations and Algorithms
+- Reheap Up: reorders a "broken" heap by floating the last element up the tree until it is in its correct location in the heap.
+- Reheap Down: reorders a "broken" heap by pushiong the root down the tree until it is in its correct position in the heap.
+
+### Heap ADT
+Heap is essentially can be implemented by an array. As a result, in code definition there's no need to define the node data structure but only head node (`HEAP`).
+```
+typedef struct {
+  void** heapAry;
+  int last;
+  int size;
+  int (*compare)(void* arg1, void* arg2);	// this compare function should be embedded into HEAP while initialization
+  int maxSize;
+} HEAP;
+```
+An important thing should be known is that, deletion of a heap usually means delete the **root** node. The largest node in the heap is that we're concerned about.
+
+### Applications
+- Selection Algorithms
+- Priority Queues
+- Sorting
