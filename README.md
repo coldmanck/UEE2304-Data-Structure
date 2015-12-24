@@ -279,7 +279,7 @@ Algorithm AVLDelete (root, dltKey, success)
 end AVLDelete
 ```
 ### AVL Tree ADT
-<img src="imgs/adt_AVL.png" />
+<img src="imgs/adt_AVL.png" width="50%"/>
 
 ### AVL Data Structure
 1. node
