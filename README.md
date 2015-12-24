@@ -222,7 +222,11 @@ There're also 3 type of traversal of an expression tree: **infix, prefix and pos
 
 ### Application Binary Tree: Huffman Code
 Huffman code makes character storage more efficient than common ASCII-style character representation. In Huffman code we assign shorter codes to characters that occur more fre- quently and longer codes to those that occur less frequently.
+
 <img src="imgs/6_huf1.png" width="50%"/>
+
+After several steps,
+
 <img src="imgs/6_huf2.png" width="50%"/>
 
 ### General Trees
@@ -257,6 +261,7 @@ typedef struct {
 
 ### Threaded Trees
 Binary tree traversal algorithms are written using either recursion or programmer-written stacks. If the tree must be traversed frequently, using **stacks** rather than recursion may be more efficient. A third alternative is threaded tree. In a threaded tree, null pointers are replaced with pointers to their successor nodes. The reason we use recursion or a stack is that, at each step, we cannot access the next node in the sequence directly and we must use backtracking. The traversal is more efficient if the tree is a threaded tree.
+
 <img src="imgs/6_thread.png" width="50%"/>
 
 ## Chapter 8: AVL Search Tree
