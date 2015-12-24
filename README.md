@@ -328,6 +328,6 @@ typedef struct {
 An important thing should be known is that, deletion of a heap usually means delete the **root** node. The largest node in the heap is that we're concerned about.
 
 ### Applications
-- Selection Algorithms
-- Priority Queues
-- Sorting
+- Selection Algorithms: select the k-th largest element from a list
+- Priority Queues: creating orderly queue with priority
+- Sorting: heap sort
