@@ -216,7 +216,7 @@ Algorithm AVLInsert(root, newData)
   return root
 end AVLInsert
 ```
-- AVL Tree Left Balance algorithm:
+- AVL Tree Left Balance Algorithm:
 ```
 Algorithm leftBalance(root)
   if(left subtree high)
@@ -227,7 +227,7 @@ Algorithm leftBalance(root)
   end if
 end leftBalance
 ```
-- AVL Tree rotate algorithm (right and left)
+- AVL Tree Rotate Algorithm (right and left)
 ```
 Algorithm rotateRight(root)
   exchange left subtree with right subtree of left subtree
@@ -239,3 +239,71 @@ Algorithm rotateLeft(root)
   make right subtree new root
 end rotateLeft
 ```
+- AVL Tree Delete Algorithm
+Follow the logic of deletion of BST, all deletions must take place at a leaf node.
+```
+Algorithm AVLDelete (root, dltKey, success)
+  if Return (empty subtree)
+    set success to false
+    return null
+  end if
+  if (dltKey < root)
+    set left subtree to AVLDelete(left subtree, dltKey, success)
+    if(tree shorter)
+      set root to deleteRightBalance(root)
+    end if
+  elseif(dltKey > root)
+    set right subtree to AVLDelete(right subtree, dltKey, success)
+    if(tree shorter)
+      set root to deleteLeftBalance(root)
+    end if
+  else
+    save root
+    if(no right subtree)
+      set success to true
+      return left subtree
+    elseif(no left subtree)
+      set success to true
+      return right subtree
+    else
+      find largest node on left subtree // or find smallest node on right subtree
+      save largest key
+      copy data in largest to root
+      set left subtree to AVLDelete(left subtree, largest key, success)
+      if(tree shorter)
+        set root to deleteRightBalance(root)
+      end if
+    end if
+  end if
+  return root
+end AVLDelete
+```
+### AVL Tree ADT
+<img src="imgs/adt_AVL.png" />
+
+### AVL Data Structure
+1. node
+```
+typedef struct node {
+  struct node* left;
+  struct node* right;
+  void* dataPtr;
+  int bal;
+} NODE;
+```
+2. root
+```
+typedef struct {
+  int count;
+  NODE* root;
+  int (*compare) (void* arg1, void* arg2);
+} AVL_TREE;
+```
+
+## Chapter 9: Heaps
+A heap is a binary tree whose left and right subtrees have values less than their parents. The root of a heap is guaranteed to hold the largest node in the tree. A **max-heap** is a complete or nearly complete (perfect or complete but not perfect) binary tree in which the key value in a node is greate than or equal to the key values in all of its subtrees, and the subtrees are in turn heaps.
+
+### 2 Matintenance Operations
+1. Reheap Up
+
+2. Reheap Down
