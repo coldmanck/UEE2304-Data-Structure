@@ -1,5 +1,6 @@
-# UEE2304-Data-Structure
-Homework codes and note of [Data Structure](https://course.nctu.edu.tw/Course/CrsOutline/show.asp?Acy=104&Sem=1&CrsNo=1077&lang=en-us) in NCTU ECE in 2015 fall.
+# UEE2304 Data Structure
+Homework source codes and note of [Data Structure](https://course.nctu.edu.tw/Course/CrsOutline/show.asp?Acy=104&Sem=1&CrsNo=1077&lang=en-us) in NCTU ECE in 2015 fall.
+Textbook: *Data Structures: A Pseudocode Approach with C*, Second Edition. Richard F. Gilberg. Behrouz A. Forouzan.
 
 ## Chapter 1: Basic concepts
 A **data structure** is an aggregation of atomic and composite data into a set with defined relationships. A **abstract data type** is a data declaration packaged together with the operations that are meaningful for the data tyoe.
@@ -176,10 +177,76 @@ typedef struct {
 - Multilinked List: a list with two or more logical key sequences
 
 ## Chapter 6: Introduction to Trees
-TBA
+### Terminology
+- parent, child, siblings, ancestor, descendent, leaf, root node
+- path: a sequence of nodes in which each node is adjacent to the next one.
+- the **level of a node** is its distance from the **root**.
+- the **height of a tree** is the number of levels of the tree. (i.e. the longest path from the deepest leaf node to the root)
+- right, left subtree
+- general tree and binary tree
+
+### Properties of Binary Tree
+we can define several properties for binary trees that distinguish them from general trees. Providing there're `N` nodes in the binary tree: 
+- Maximum Height `Hmax = N`
+- Minimum Height `Hmin = |_ log2N _| + 1`
+- Maximum Nodes `Nmax = 2^H - 1`
+- Minimum Nodes `Nmin = H`
+- Balance: a balanced binary tree, the height of any node of a tree should differ by no more than 1, defined by AVL Tree.
+- Complete (Perfect) Trees: a tree which has the maximum number of entries for its height (`Nmax = 2^H - 1`)
+- Nearly Complete (Complete but not perfect) Tree: a tree has the minimum height for its nodes (`Hmin = |_ log2N _| + 1`) and all nodes in the last level are found on the left.
+
+### Binary Tree Traversals
+- Depth-First Traversal: using stack
+  - Preorder (NLR)
+  - Inorder (LNR)
+  - Postorder (LRN)
+- Breadth-First Traversal: using queue
+
+### Application of Binary Tree: Expression Tree
+An **expression tree** is a binary tree with the following properties:
+- Each leaf is an operand
+- The root and internal nodes are operators.
+- Subtrees are subexpressions, with the root being an operator.
+There're also 3 type of traversal of an expression tree: **infix, prefix and postfix traversal**, which exploit inorder, preorder and postorder traversal, individually.
+
+### Application Binary Tree: Huffman Code
+Huffman code makes character storage more efficient than common ASCII-style character representation. In Huffman code we assign shorter codes to characters that occur more fre- quently and longer codes to those that occur less frequently.
+<img src="imgs/6_huf1.png" width="50%"/>
+<img src="imgs/6_huf2.png" width="50%"/>
+
+### General Trees
+A general tree is a tree in which each node can have an unlimited outdegree. There're 2 types of insertion in general trees:
+- FIFO
+- LIFO
+One can easily convert general trees to binary trees, by connecting the siblings of the same level and deleting unneeded branches.
 
 ## Chapter 7: Binary Search Tree
-TBA
+A binary search tree (BST) is a binary tree with the following properties:
+- All items in the left subtree are less than the root
+- All items in the right subtree are greater than or equal to the root
+- Each subtree is itself a binary search tree
+
+### ADT of Binary Search Tree
+1. node
+```
+typedef struct node {
+  struct node* left;
+  struct node* right;
+  void* dataPtr;
+} NODE;
+```
+2. BST_TREE
+```
+typedef struct {
+  NODE* root;
+  int count;
+  int (*compare)(void* arg1, void* arg2);
+} BST_TREE;
+```
+
+### Threaded Trees
+Binary tree traversal algorithms are written using either recursion or programmer-written stacks. If the tree must be traversed frequently, using **stacks** rather than recursion may be more efficient. A third alternative is threaded tree. In a threaded tree, null pointers are replaced with pointers to their successor nodes. The reason we use recursion or a stack is that, at each step, we cannot access the next node in the sequence directly and we must use backtracking. The traversal is more efficient if the tree is a threaded tree.
+<img src="imgs/6_thread.png" width="50%"/>
 
 ## Chapter 8: AVL Search Tree
 An AVL tree is a binary tree that either is empty or consist of 2 AVL subtrees, TL and TR, whose heights differ by no more than 1. **AVL tree balance factor** is a balance factore as the height of the lefft subtree minus that of the right subtree. When AVL tree balance factor represent different conditions when having specific value:
@@ -279,7 +346,7 @@ Algorithm AVLDelete (root, dltKey, success)
 end AVLDelete
 ```
 ### AVL Tree ADT
-<img src="imgs/adt_AVL.png" width="50%"/>
+<img src="imgs/8_adt_AVL.png" width="50%"/>
 
 ### AVL Data Structure
 1. node
