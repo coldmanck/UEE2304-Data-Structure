@@ -2,7 +2,7 @@
 Homework source codes and note of [Data Structure](https://course.nctu.edu.tw/Course/CrsOutline/show.asp?Acy=104&Sem=1&CrsNo=1077&lang=en-us) in NCTU ECE in 2015 fall.
 Textbook: *Data Structures: A Pseudocode Approach with C*, Second Edition. Richard F. Gilberg. Behrouz A. Forouzan.
 
-## Indexs
+## Index
 - [Chapter 1: Basic concepts](https://github.com/coldmanck/UEE2304-Data-Structure/blob/master/README.md#chapter-1-basic-concepts)
 - [Chapter 2: Recursion](https://github.com/coldmanck/UEE2304-Data-Structure/blob/master/README.md#chapter-2-recursion)
 - [Chapter 3: Stack](https://github.com/coldmanck/UEE2304-Data-Structure/blob/master/README.md#chapter-3-stack)
