@@ -12,6 +12,7 @@ Textbook: *Data Structures: A Pseudocode Approach with C*, Second Edition. Richa
 - [Chapter 7: Binary Search Tree](https://github.com/coldmanck/UEE2304-Data-Structure/blob/master/README.md#chapter-7-binary-search-tree)
 - [Chapter 8: AVL Search Tree](https://github.com/coldmanck/UEE2304-Data-Structure/blob/master/README.md#chapter-8-avl-search-tree)
 - [Chapter 9: Heaps](https://github.com/coldmanck/UEE2304-Data-Structure/blob/master/README.md#chapter-9-heaps)
+- [Chapter 10: Multiway Trees](https://github.com/coldmanck/UEE2304-Data-Structure/blob/master/README.md#chapter-10-multiway-trees)
 
 ## Chapter 1: Basic concepts
 A **data structure** is an aggregation of atomic and composite data into a set with defined relationships. A **abstract data type** is a data declaration packaged together with the operations that are meaningful for the data tyoe.
@@ -434,4 +435,18 @@ A B-tree is an m-way search tree with the following additional properties:
 4. A leaf node has at least m / 2 – 1 and at most m – 1 entries.
 
 ## Implementation of B-trees
+The four basic operations for B-trees are: insert, delete, traverse, and search.
+
+- Insertion
 The process of inserting an entry into the parent provides an interesting contrast to the binary search tree. Recall that the binary search tree grew in an unbalanced fashion from the top down. B-trees grow in a balanced fashion from the bottom up. When the root node of a B-tree overflows and the median entry is pushed up, a new root node is created and the tree grows one level.
+
+<img src="imgs/10_btree_insert_design.png" width="50%" />
+
+<img src="imgs/10_btree_insert.png" width="50%" />
+
+- Deletion
+There are three considerations when deleting a data entry from a B-tree node. First, we must ensure that the data to be deleted are actually in the tree. Sec- ond, if the node does not have enough entries after the deletion, we need to correct the structural deficiency. A deletion that results in a node with fewer than the minimum number of entries is an underflow. Finally, as we saw with the binary search tree, we can delete only from a leaf node. Therefore, if the data to be deleted are in an internal node, we must find a data entry to take their place.
+
+<img src="imgs/10_btree_delete_design.png" width="50%" />
+
+<img src="imgs/10_btree_delete.png" width="50%" />
