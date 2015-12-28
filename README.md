@@ -414,3 +414,24 @@ An important thing should be known is that, deletion of a heap usually means del
 - Selection Algorithms: select the k-th largest element from a list
 - Priority Queues: creating orderly queue with priority
 - Sorting: heap sort
+
+## Chapter 10: Multiway Trees
+Whereas each node in a binary tree has only one entry, multiway trees have multiple entries in each node and thus may have multiple subtrees.
+
+### M-way Search Trees
+An m-way tree is a search tree in which each node can have from 0 to m subtrees, where m is defined as the **B-tree order**. Given a nonempty multiway tree, we can identify the following properties:
+1. Each node has 0 to m subtrees
+2. A node with k (<m) subtrees contains k subtrees and k-1 data entries.
+3. The keys of the data entries are ordered key1 <= key2 <= key3 <=... <= keyk
+4. All subtrees are themselves multiway trees.
+And in face, the BST is an special m-way tree of order 2.
+
+### B-trees
+A B-tree is an m-way search tree with the following additional properties:
+1. The root is either a leaf or it has 2 ... m subtrees, and m means the order of this B-tree.
+2. All internal nodes have at least m / 2 nonnull subtrees and at most m nonnull subtrees.
+3. All leaf nodes are at the same level; that is, the tree is perfectly balanced. 
+4. A leaf node has at least m / 2 – 1 and at most m – 1 entries.
+
+## Implementation of B-trees
+The process of inserting an entry into the parent provides an interesting contrast to the binary search tree. Recall that the binary search tree grew in an unbalanced fashion from the top down. B-trees grow in a balanced fashion from the bottom up. When the root node of a B-tree overflows and the median entry is pushed up, a new root node is created and the tree grows one level.
