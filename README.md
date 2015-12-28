@@ -450,3 +450,31 @@ There are three considerations when deleting a data entry from a B-tree node. Fi
 <img src="imgs/10_btree_delete_design.png" width="50%" />
 
 <img src="imgs/10_btree_delete.png" width="50%" />
+
+- Traversal
+- Search
+
+### B-Tree's ADT
+The main data structure of a B-tree is *BTREE*, which consists of *NODE* and *ENTRY*.
+```
+typedef struct {
+  void* dataPtr;
+  NODE* right;
+} ENTRY;
+
+typedef struct node {
+  NODE* left;
+  int numEntries;
+  ENTRY entries[ORDER-1]
+} NODE;
+
+typedef struct {
+  NODE* root;
+  int count;
+  int (*compare)(void* arg1, void* arg2);
+} BTREE;
+```
+
+### Simplified B-Tree
+1. 2-3 Tree: The 2-3 tree is a B-tree of order 3.
+2. 2-3-4 Tree: The 2-3-4 tree is a B-tree of order 4.
