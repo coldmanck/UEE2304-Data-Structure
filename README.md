@@ -502,3 +502,52 @@ Trie is a kind of improved m-ary tree which prunes unused subtrees; that is, cua
 
 <img src="imgs/10_trie.png" witdh="50%" />
 
+## Chapter 11: Graphs
+Graph is a special data structure that differs from all of the others in one major concept: **each node may have multiple predecessors as well as multiple successors**. Graphs may be directed or undirected. In a **directed** graph, each line, called an *arc*, has a direction indicating how it may be traversed. In an **undirected** graph, the line is known as an *edge*, and it may be traversed in either direction. Two vertices in a graph are said to be **adjacent** vertices (or neighbors) if there is a path of length 1 connecting them. For example, if there's a arc from A to B, we can say B is adjacent to A but not vice versa. 
+
+- A **cycle** is a path consisting of at least three vertices that starts and ends with the same vertex. 
+- A **loop** is a special case of a cycle in which a single arc begins and ends with the same vertex.
+- A directed graph is **strongly connected** if there is a path from each vertex to every other vertex in the digraph.
+- A directed graph is **weakly connected** if at least two vertices are not connected
+- A graph is a **disjoint graph** if it is not connected.
+- The **degree** of a vertex is the number of lines incident to it.
+
+### Traversal of Graph
+- Depth-First Search (DFS): all of a node’s descendents are processed before moving to an adjacent node.
+- Breadth-First Search (BFS):  all adjacent vertices are processed before processing the descendents of a vertex.
+
+### Adjacency Matrix
+The adjacency matrix uses a vector (one-dimensional array) for the vertices and a matrix (two-dimensional array) to store the edges.
+
+<img src="imgs/11_adj_matrix.png" width="50%" />
+
+### Adjacency List
+The adjacency list uses a two-dimensional ragged array to store the edges. The vertex list is a singly linked list of the vertices in the list. Depending on the application, it could also be implemented using doubly linked lists or cir- cularly linked lists. The pointer at the left of the list links the vertex entries. The pointer at the right in the vertex is a head pointer to a linked list of edges from the vertex.
+
+<img src="imgs/11_adj_lsit.png" width="50%" />
+
+### Graph Data Structure
+```
+typedef struct {
+  int count; 
+  struct vertex* first; 
+  int (*compare)(void* argu1, void* argu2);
+} GRAPH;
+
+typedef struct vertex {
+  struct vertex* pNextVertex;
+  void* dataPtr;
+  int inDegree;
+  int outDegree;
+  short processed;
+  struct arc* pArc;
+} VERTEX;
+
+typedef struct arc {
+  struct vertex* destination;
+  struct arc* pNextArc; 
+} ARC;
+```
+
+<img src="imgs/11_graph_ds.png" width="50%" />
+
