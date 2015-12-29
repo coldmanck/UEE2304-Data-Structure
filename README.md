@@ -480,21 +480,24 @@ typedef struct {
 2. 2-3-4 Tree: The 2-3-4 tree is a B-tree of order 4.
 
 ### B-Tree Variations
-1. B*tree: There're some different characteristic with B-tree.
+**B*tree**: There're some different characteristic with B-tree.
 - each node containing a minimum of two-thirds (2/3) the maximum entries.
 - when a node overflows, instead of being split immediately, the data are redistributed among the node’s siblings.
 - Splitting occurs only when all of the siblings are full. Further- more, when the nodes are split, data from two full siblings are divided among the two full nodes and a new node, with the result that all three nodes are two-thirds full.
 
-2. B+tree: There are two differences between the B-tree and the B+tree:
+**B+tree**: There are two differences between the B-tree and the B+tree:
+
 - Each data entry must be represented at the leaf level, even though there may be internal nodes with the same keys. Because the internal nodes are used only for searching, they generally do not contain data.
 - Each leaf node has one additional pointer, which is used to move to the next leaf node in sequence.
 
-3. Lexical Tree
+**Lexical Tree**
+
 Each entry in the lexical search tree contains a pointer to the next level. In addition, each node of a 26-ary tree contains 26 pointers.
 
 <img src="imgs/10_lex_tree.png" witdh="50%" />
 
-4. Tries
+**Tries**
+
 Trie is a kind of improved m-ary tree which prunes unused subtrees; that is, cuat all of the branches that are not needed.
 
 <img src="imgs/10_trie.png" witdh="50%" />
