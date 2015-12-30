@@ -13,6 +13,9 @@ Textbook: *Data Structures: A Pseudocode Approach with C*, Second Edition. Richa
 - [Chapter 8: AVL Search Tree](https://github.com/coldmanck/UEE2304-Data-Structure/blob/master/README.md#chapter-8-avl-search-tree)
 - [Chapter 9: Heaps](https://github.com/coldmanck/UEE2304-Data-Structure/blob/master/README.md#chapter-9-heaps)
 - [Chapter 10: Multiway Trees](https://github.com/coldmanck/UEE2304-Data-Structure/blob/master/README.md#chapter-10-multiway-trees)
+- [Chapter 11: Graphs](https://github.com/coldmanck/UEE2304-Data-Structure/blob/master/README.md#chapter-11-graphs)
+- [Chapter 12: Sorting](https://github.com/coldmanck/UEE2304-Data-Structure/blob/master/README.md#chapter-12-sorting)
+- [Chapter 13: Searching](https://github.com/coldmanck/UEE2304-Data-Structure/blob/master/README.md#chapter-13-searching)
 
 ## Chapter 1: Basic concepts
 A **data structure** is an aggregation of atomic and composite data into a set with defined relationships. A **abstract data type** is a data declaration packaged together with the operations that are meaningful for the data tyoe.
