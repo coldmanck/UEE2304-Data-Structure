@@ -551,3 +551,15 @@ typedef struct arc {
 
 <img src="imgs/11_graph_ds.png" width="50%" />
 
+### Networks
+A network is a graph whose lines are weighted.
+
+<img src="imgs/11_network.png" width="50%" />
+
+A **spanning tree** contains all of the vertices in a graph. A **minimum spanning tree** is a spanning tree in which the total weight of the lines is guaranteed to be the minimum of all possible trees in the graph.
+
+**Shortest Path Algorithm**
+The Dijkstra algorithm is used to find the shortest path between any two nodes in a graph. 
+
+## Chapter 12: Sorting
+## Chapter 13: Searching
