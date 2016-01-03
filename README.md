@@ -607,4 +607,16 @@ In the polyphase merge, a constant number of input files are merged to one outpu
 ### Soft Phase Revisit
 With today’s modern computers operating in picosecond speeds and file processing operating in microsecond speeds, little is gained by improving the sort speed. However, if we slow up the sort speed a little using a slower sort, we can actually improve overall speed. By using **tree sorts** (e.g. heap sort), then, we can write longer merge runs, which reduces the number of merge runs and therefore speeds up the sorting process.
 
+### Quick Sort Efficiency
+General formula:
+```
+f(n) = 0		      	, if n < 2.
+f(n) = f(i) + f(n - 1 - i) + n	, if n >= 2. (i: index of pivot)
+```
+This formula can be used to find the complexity of the quick sort in three sit- uations: worst case, best case, and average case.
+- Worst case: O(n^2)
+- Average case: O(nlogn)
+- Best case: O(nlogn)
+(To be finished)
+
 ## Chapter 13: Searching
