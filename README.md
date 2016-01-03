@@ -591,4 +591,20 @@ The third category of sorts, exchange sorts, contains the most common sort taugh
 
 ### External Sorts
 
+<img src="imgs/12_merge_sort.png" width="50%" />
+
+**The sorting process** Sorting process consist of 2 phases: sorting phase and merging phase. In sorting phase, the maximum number of data can be processed in primary memory are processed each time. After all data processed it will go to merging phase. There're 3 main type sorting approaches in merging phase: (1) natural merge (2) balanced merge and (3) polyphased merge.
+
+#### natural merge
+Each phase merges a constant number of input files into one output file. Therefore, unless the file is completely ordered, the merge runs must be distributed to two merge files between two merge phase.
+
+#### balanced merge
+The balanced merge eliminates the distribution phase by using the same number of input and output merge files.
+
+#### polyphased merge
+In the polyphase merge, a constant number of input files are merged to one output file. As the data in each input file are completely merged, it immediately becomes the output file and what was the output file becomes an input file.
+
+### Soft Phase Revisit
+With today’s modern computers operating in picosecond speeds and file processing operating in microsecond speeds, little is gained by improving the sort speed. However, if we slow up the sort speed a little using a slower sort, we can actually improve overall speed. By using **tree sorts** (e.g. heap sort), then, we can write longer merge runs, which reduces the number of merge runs and therefore speeds up the sorting process.
+
 ## Chapter 13: Searching
