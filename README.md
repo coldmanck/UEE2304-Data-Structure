@@ -399,7 +399,7 @@ Heap is often implemented with array. This is because heap is always complete or
 
 ### Matintenance Operations and Algorithms
 - Reheap Up: reorders a "broken" heap by floating the last element up the tree until it is in its correct location in the heap.
-- Reheap Down: reorders a "broken" heap by pushiong the root down the tree until it is in its correct position in the heap.
+- Reheap Down: reorders a "broken" heap by pushing the root down the tree until it is in its correct position in the heap.
 
 ### Heap ADT
 Heap is essentially can be implemented by an array. As a result, in code definition there's no need to define the node data structure but only head node (`HEAP`).
@@ -565,4 +565,30 @@ A **spanning tree** contains all of the vertices in a graph. A **minimum spannin
 The Dijkstra algorithm is used to find the shortest path between any two nodes in a graph. 
 
 ## Chapter 12: Sorting
+We discuss six internal sorts in this chapter: insertion sort, bubble sort, selec- tion sort, shell sort, heap sort, and quick sort. The first three are useful only for sorting very small lists, but they form the basis of the last three, which are useful general-purpose sorting concepts. Sorts are generally classified as either **internal** or **external** sorts. In an internal sort, all of the data are held in primary memory during the sorting process. An external sort uses primary memory for the data currently being sorted and secondary storage for any data that does not fit in primary memory.
+
+<img src="imgs/12_sort_cat.png" width="50%" />
+
+- Sort order
+- Sort stability
+- Sort efficiency
+
+### Selection Sorts
+In each pass of the selection sort, the smallest element is selected from the unsorted sublist and exchanged with the element at the beginning of the unsorted list.
+- Straight selection sort: avg and worst time: `O(n^2)`
+- Heap sort: the largest element (the root) is selected to inserted to the front of sorted list, and root is replaced by the last element in the heap. Average and worst time: `O(nlogn)` ( = Outer loop `n` * reheap down to leaf `log(n)`)
+
+### Insertion Sorts
+In each pass of an insertion sort, one or more pieces of data are inserted into their correct location in an ordered list.
+- Straight insertion sort: Average and worst time: f(n) = `n(n+1)/2` -> O(n) = `n^2`
+- Shell sort: an improved version of the straight insertion sort in which diminishing partitions are used to sort the data. f(n) = `log(n) * [(n - n/2) + (n - 4/n) + ... + 1`. Avg. and worst time: `O(n^1.25)` and `O(n^1.5)`
+**Note** Someone want to make use of shell sort to pursue higher efficiency will be recommended to have a look at **quick sort**, instead of finding the best increment sequence.
+
+### Exchange Sorts
+The third category of sorts, exchange sorts, contains the most common sort taught in computer science—the bubble sort—and the most efficient general- purpose sort, quick sort.
+- Bubble Sort: One can set an boolean flag `sorted` to false as default to examine if the unfinished (unordered) list happens to be ordered so that it can stop earlier. `f(n) = n(n+1) / 2, O(n^2)`
+- Quick Sort:  Quick sort is an exchange sort in which a pivot key is placed in its correct position in the array while rearranging other elements widely dispersed across the list. **Note** When subarray's size is smaller enough (about 16), turn to use straight insertion sort can be more efficient. `O(nlog(n))`
+
+### External Sorts
+
 ## Chapter 13: Searching
