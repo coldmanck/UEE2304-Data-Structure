@@ -1,6 +1,6 @@
 # UEE2304 Data Structure
 Homework source codes and note of [Data Structure](https://course.nctu.edu.tw/Course/CrsOutline/show.asp?Acy=104&Sem=1&CrsNo=1077&lang=en-us) in NCTU ECE in 2015 fall.
-Textbook: *Data Structures: A Pseudocode Approach with C*, Second Edition. Richard F. Gilberg. Behrouz A. Forouzan.
+Textbook: *Data Structures: A Pseudocode Approach with C*, Second Edition. Richard F. Gilberg. Behrouz A. Forouzan. 
 
 ## Index
 - [Chapter 1: Basic concepts](https://github.com/coldmanck/UEE2304-Data-Structure/blob/master/README.md#chapter-1-basic-concepts)
@@ -680,3 +680,6 @@ end hash
 <img src="imgs/13_Collision_resolution.png" width="50%" />
 
 (To be finish)
+
+## Credits
+Picture and discription patrially from *Data Structures: A Pseudocode Approach with C*, Second Edition. Richard F. Gilberg. Behrouz A. Forouzan.
