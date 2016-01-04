@@ -617,6 +617,66 @@ This formula can be used to find the complexity of the quick sort in three sit- 
 - Worst case: O(n^2)
 - Average case: O(nlogn)
 - Best case: O(nlogn)
-(To be finished)
+(To be finish)
 
 ## Chapter 13: Searching
+One of the most common and time-consuming operations in computer sci- ence is searching, the process used to find the location of a target among a list of objects. We begin with list searching and a discussion of the two basic search algorithms: **the sequential search** -— including three interesting variations -- and **the binary search**.
+
+### Sequential Searches: O(n)
+We start searching for the target at the begin- ning of the list and continue until we find the target or we are sure that it is not in the list.
+
+#### Variations on Sequential Searches
+- the sentinel search: A target is put in the list by adding an extra element (sentinel entry) at the end of the array and placing the target in the sentinel.
+- the probability search: The data in the array are arranged with the most probable search elements at the beginning of the array and the least probable at the end. 
+- the ordered list search: It is commonly used when searching linked list implementations.
+
+### Binary Searches: O(logn)
+The binary search starts by testing the data in the element at the middle of the array to determine if the target is in the first or the second half of the list.
+
+### Hashed List Searches
+In a hashed search, the key, through an algorithmic function, determines the location of the data. Another way to describe hashing is as a key-to-address transformation in which the keys map to addresses in a list. 
+
+<img src="imgs/13_hash.png" width="50%" />
+
+We call the set of keys that hash to the same location in our list **synonyms**. If the actual data that we insert into our list contain two or more synonyms, we can have collisions. A **collision** occurs when a hashing algorithm pro- duces an address for an insertion key and that address is already occupied. The address produced by the hashing algorithm is known as the **home address**. The memory that contains all of the home addresses is known as the **prime area**. When two keys collide at a home address, we must resolve the collision by placing one of the keys and its data in another location. 
+
+**Collision resolution.** We first hash the key and check the home address to deter- mine whether it contains the desired element. If it does, the search is com- plete. If not, we must use the collision resolution algorithm to determine the next location and continue until we find the element or determine that it is not in the list. Each calculation of an address and test for success is known as a probe.
+
+#### Hashing methods
+
+<img src="imgs/13_hash_method.png" width="50%" />
+
+- The direct and subtraction hash functions both guarantee a search effort of one with no collisions. They are one-to-one hashing methods: only one key hashes to each address.
+- Rotation is often used in combination with folding and pseu- dorandom hashing.
+- Pseudorandom Hashing: generate psudorandom coefficient `a` and `c` to form `y = (ax + c) mod ary_size`
+
+#### One common hashing algorithm
+```
+Algorithm hash (key, size, maxAddr, addr)
+This algorithm converts an alphanumeric key of size characters into an integral address.
+   Pre   key is a key to be hashed
+         size is the number of characters in the key
+         maxAddr is maximum possible address for the list
+   Post  addr contains the hashed address
+1 set looper to 0
+2 set addr to 0
+// Hash key
+3 for each character in key
+	1 if (character not space)
+		1 add character to address 
+		2 rotate addr 12 bits right
+	2 end if
+4 end loop
+// Test for negative address
+5 if (addr < 0)
+	1 addr = absolute(addr)
+6 end if
+7 addr = addr modulo maxAddr
+end hash
+```
+
+#### Collision Resolutions
+
+<img src="imgs/13_Collision_resolution.png" width="50%" />
+
+(To be finish)
