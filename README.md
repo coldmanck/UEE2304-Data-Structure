@@ -3,19 +3,19 @@ Homework source codes and note of [Data Structure](https://course.nctu.edu.tw/Co
 Textbook: *Data Structures: A Pseudocode Approach with C*, Second Edition. Richard F. Gilberg. Behrouz A. Forouzan. 
 
 ## Index
-- [Chapter 1: Basic concepts](https://github.com/coldmanck/UEE2304-Data-Structure/blob/master/README.md#chapter-1-basic-concepts)
-- [Chapter 2: Recursion](https://github.com/coldmanck/UEE2304-Data-Structure/blob/master/README.md#chapter-2-recursion)
-- [Chapter 3: Stack](https://github.com/coldmanck/UEE2304-Data-Structure/blob/master/README.md#chapter-3-stack)
-- [Chapter 4: Queue](https://github.com/coldmanck/UEE2304-Data-Structure/blob/master/README.md#chapter-4-queue)
-- [Chapter 5: General Linear Lists](https://github.com/coldmanck/UEE2304-Data-Structure/blob/master/README.md#chapter-5-general-linear-lists)
-- [Chapter 6: Introduction to Trees](https://github.com/coldmanck/UEE2304-Data-Structure/blob/master/README.md#chapter-6-introduction-to-trees)
-- [Chapter 7: Binary Search Tree](https://github.com/coldmanck/UEE2304-Data-Structure/blob/master/README.md#chapter-7-binary-search-tree)
-- [Chapter 8: AVL Search Tree](https://github.com/coldmanck/UEE2304-Data-Structure/blob/master/README.md#chapter-8-avl-search-tree)
-- [Chapter 9: Heaps](https://github.com/coldmanck/UEE2304-Data-Structure/blob/master/README.md#chapter-9-heaps)
-- [Chapter 10: Multiway Trees](https://github.com/coldmanck/UEE2304-Data-Structure/blob/master/README.md#chapter-10-multiway-trees)
-- [Chapter 11: Graphs](https://github.com/coldmanck/UEE2304-Data-Structure/blob/master/README.md#chapter-11-graphs)
-- [Chapter 12: Sorting](https://github.com/coldmanck/UEE2304-Data-Structure/blob/master/README.md#chapter-12-sorting)
-- [Chapter 13: Searching](https://github.com/coldmanck/UEE2304-Data-Structure/blob/master/README.md#chapter-13-searching)
+- [Chapter 1: Basic concepts](https://github.com/coldmanck/UEE2304-Data-Structure#chapter-1-basic-concepts)
+- [Chapter 2: Recursion](https://github.com/coldmanck/UEE2304-Data-Structure#chapter-2-recursion)
+- [Chapter 3: Stack](https://github.com/coldmanck/UEE2304-Data-Structure#chapter-3-stack)
+- [Chapter 4: Queue](https://github.com/coldmanck/UEE2304-Data-Structure#chapter-4-queue)
+- [Chapter 5: General Linear Lists](https://github.com/coldmanck/UEE2304-Data-Structure#chapter-5-general-linear-lists)
+- [Chapter 6: Introduction to Trees](https://github.com/coldmanck/UEE2304-Data-Structure#chapter-6-introduction-to-trees)
+- [Chapter 7: Binary Search Tree](https://github.com/coldmanck/UEE2304-Data-Structure#chapter-7-binary-search-tree)
+- [Chapter 8: AVL Search Tree](https://github.com/coldmanck/UEE2304-Data-Structure#chapter-8-avl-search-tree)
+- [Chapter 9: Heaps](https://github.com/coldmanck/UEE2304-Data-Structure#chapter-9-heaps)
+- [Chapter 10: Multiway Trees](https://github.com/coldmanck/UEE2304-Data-Structure#chapter-10-multiway-trees)
+- [Chapter 11: Graphs](https://github.com/coldmanck/UEE2304-Data-Structure#chapter-11-graphs)
+- [Chapter 12: Sorting](https://github.com/coldmanck/UEE2304-Data-Structure#chapter-12-sorting)
+- [Chapter 13: Searching](https://github.com/coldmanck/UEE2304-Data-Structure#chapter-13-searching)
 
 ## Chapter 1: Basic concepts
 A **data structure** is an aggregation of atomic and composite data into a set with defined relationships. A **abstract data type** is a data declaration packaged together with the operations that are meaningful for the data tyoe.
